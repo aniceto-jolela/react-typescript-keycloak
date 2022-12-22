@@ -106,7 +106,6 @@ export default keycloak;
 
 ```react
     npm install --save @react-keycloak/web
-    npm install --save keycloak
 ```
 
 ## Technology used
@@ -121,5 +120,3 @@ export default keycloak;
 #
 ###### Author : Aniceto Jolela 🥰
  Meu  | [Linkedin](https://www.linkedin.com/in/aniceto-jolela-076547184/))
-
-<p align='center'> 🚧 </p>
