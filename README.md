@@ -105,6 +105,10 @@ export default keycloak;
 ## Installing Dependency
 
 ```react
+    npm install
+```
+
+```react
     npm install --save @react-keycloak/web
 ```
 
@@ -119,4 +123,4 @@ export default keycloak;
 
 #
 ###### Author : Aniceto Jolela 🥰
- Meu  | [Linkedin](https://www.linkedin.com/in/aniceto-jolela-076547184/))
+ My  | [Linkedin](https://www.linkedin.com/in/aniceto-jolela-076547184/))
