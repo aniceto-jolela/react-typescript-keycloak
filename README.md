@@ -4,7 +4,7 @@
 This is a mini login authentication system, using keycloak.
 </p>
 
-# Summary
+## Summary
 
 * [Installing Keycloak in Docker](#installing-keycloak-in-docker)
 * [Configuring the Keycloak](#configuring-the-keycloak)
@@ -14,7 +14,7 @@ This is a mini login authentication system, using keycloak.
 
 
 
-# Installing Keycloak in Docker
+## Installing Keycloak in Docker
 
 ```bash
 # Run this command in cmd
@@ -31,7 +31,7 @@ Access the url
 http://0.0.0.0:8080/admin/master/console/
 ```
 
-# Configuring the Keycloak
+## Configuring the Keycloak
 
  - Step 1
    - Administration Console
@@ -67,9 +67,11 @@ http://0.0.0.0:8080/admin/master/console/
 
   <img src='public/keycloak/10.png' width='400px' height='300px' />
   <img src='public/keycloak/11.png' width='400px' height='300px' />  
+- Step 7
+  - Login screen customization
+  <img src='public/keycloak/12.png' width='400px' height='300px' />  
 
-
-# Integrating Keycloak in React
+## Integrating Keycloak in React
 
 Change keycloak **json** file to **ts**
 
@@ -100,14 +102,14 @@ const keycloak = new Keycloak(keycloakConfig);
 export default keycloak;
 ```
 
-# Installing Dependency
+## Installing Dependency
 
 ```react
     npm install --save @react-keycloak/web
-
+    npm install --save keycloak
 ```
 
-# Technology used
+## Technology used
 
 |[Typescript](https://developer.mozilla.org/pt-BR/docs/Web/TypeScript)|[Docker](https://www.docker.com/products/docker-desktop/)|
 |--- | ---|
@@ -115,5 +117,9 @@ export default keycloak;
 |[HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)|[Node](https://nodejs.org/en/)|
 |[Vs code](https://code.visualstudio.com/download)|[Reactjs](https://reactjs.org/docs/create-a-new-react-app.html)|
 
+
+#
+###### Author : Aniceto Jolela 🥰
+ Meu  | [Linkedin](https://www.linkedin.com/in/aniceto-jolela-076547184/))
 
 <p align='center'> 🚧 </p>

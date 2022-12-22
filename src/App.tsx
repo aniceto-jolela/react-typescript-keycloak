@@ -1,25 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { useKeycloak } from "@react-keycloak/web";
 
 function App() {
+  const { initialized, keycloak } = useKeycloak();
+  const [getName,setName] = useState<string | undefined>('')
+  const [getEmail,setEmail] = useState<string | undefined>('')
+  const [getFirstName,setFirstName] = useState<string | undefined>('')
+  const [getLastName,setLastName] = useState<string | undefined>('')
+
+  if (!initialized) {
+    <div>Loding...</div>;
+  }
+
+  if (keycloak.authenticated) {
+    keycloak.loadUserProfile().then((info) => {
+      setName(info.username)
+      setEmail(info.email)
+      setFirstName(info.firstName)
+      setLastName(info.lastName)
+      console.log(info);
+    });
+}else{
+  console.log("Não authenticated.")
+}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1 style={{textAlign:'center'}}>Welcome</h1>
+
+      <div style={{textAlign:'center'}}>
+        <h4>Name : {getFirstName} {getLastName}</h4>
+        <h4>Username : {getName}</h4>
+        <h4>Email : {getEmail}</h4>
+      <button
+        onClick={() => {
+          keycloak.logout();
+        }}
+      >
+        Logout
+      </button>
+      </div>
+
+    </>
   );
 }
 
